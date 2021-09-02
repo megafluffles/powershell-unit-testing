@@ -13,6 +13,7 @@ pool:
 steps:
 
 - task: Pester@10
+  displayName: Run Pester Tests
   inputs:
     scriptFolder: '$(System.DefaultWorkingDirectory)\*'
     resultsFile: '$(System.DefaultWorkingDirectory)\Test-Pester.XML'

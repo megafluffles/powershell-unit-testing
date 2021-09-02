@@ -3,7 +3,7 @@ class WebRequest {
 
     }
     [string]CallWeb() {
-        [BasicHtmlWebResponseObject]$response = `
+        [Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject]$response = `
             Invoke-WebRequest -Uri 'https://jsonplaceholder.typicode.com/todos/1'
         return $response.Content
     }

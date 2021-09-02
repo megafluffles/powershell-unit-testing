@@ -18,3 +18,9 @@ steps:
     scriptFolder: '$(System.DefaultWorkingDirectory)\*'
     resultsFile: '$(System.DefaultWorkingDirectory)\Test-Pester.XML'
     usePSCore: False
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'NUnit'
+    testResultsFiles: '**/TEST-*.xml'
+    failTaskOnFailedTests: true

@@ -4,6 +4,7 @@ Describe 'WebRequest' {
     Context 'When response is Hello' {
         It 'should return Hello' {
             # Arrange
+            Mock Invoke-WebRequest { return 'Hello' }
             [WebRequest]$sut = `
                 [WebRequest]::new()
 

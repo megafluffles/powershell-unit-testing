@@ -1,9 +1,11 @@
+Using Namespace Microsoft.PowerShell.Commands
+
 class WebRequest {
     WebRequest() {
 
     }
     [string]CallWeb() {
-        [Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject]$response = `
+        [BasicHtmlWebResponseObject]$response = `
             Invoke-WebRequest -Uri 'https://jsonplaceholder.typicode.com/todos/1'
         return $response.Content
     }

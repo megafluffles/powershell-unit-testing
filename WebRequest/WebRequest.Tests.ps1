@@ -11,9 +11,7 @@ Describe 'WebRequest' {
 
                 $responseMessage.Content = [StringContent]::new('Hello')
 
-                [BasicHtmlWebResponseObject]$responseObject = [BasicHtmlWebResponseObject]::new($responseMessage)
-
-                return $responseObject
+                return [BasicHtmlWebResponseObject]::new($responseMessage)
             }
             [WebRequest]$sut = `
                 [WebRequest]::new()

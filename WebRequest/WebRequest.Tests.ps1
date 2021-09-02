@@ -8,8 +8,11 @@ Describe 'WebRequest' {
             # Arrange
             Mock -ModuleName WebRequest Invoke-WebRequest { 
                 [HttpResponseMessage]$responseMessage = [HttpResponseMessage]::new()
-                $responseMessage.Content = 'Hello'
+
+                $responseMessage.Content = [StringContent]::new('Hello')
+
                 [BasicHtmlWebResponseObject]$responseObject = [BasicHtmlWebResponseObject]::new($responseMessage)
+
                 return $responseObject
             }
             [WebRequest]$sut = `

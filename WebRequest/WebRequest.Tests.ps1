@@ -1,4 +1,5 @@
 Using Module ./WebRequest.psm1
+Using Namespace Microsoft.PowerShell.Commands
 
 Describe 'WebRequest' {
     Context 'When response is Hello' {

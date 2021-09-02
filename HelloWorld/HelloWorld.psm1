@@ -4,6 +4,6 @@ class HelloWorld {
         $this._yourName = $yourName
     }
     hidden [string]GetHello() {
-        return "Hello, $yourName!"
+        return "Hello, $this._yourName!"
     }
 }
